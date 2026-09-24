@@ -30,5 +30,5 @@
   },
  
   "postCreateCommand": "npm i -g @forge/cli",
-  "postStartCommand": "npx --yes skills add atlassian/forge-skills --all -g || true"
+  "postStartCommand": "mkdir -p ~/.agents/skills && git clone --depth 1 https://github.com/atlassian/forge-skills.git ~/.agents/skills/forge-skills || true"
 }
