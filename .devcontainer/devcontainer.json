@@ -6,10 +6,14 @@
     "vscode": {
     "extensions": [
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "github.copilot",
+        "github.copilot-chat"
       ],
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "chat.agent.enabled": true
+
       }
     }
   },
@@ -24,5 +28,5 @@
       "documentationUrl": "https://developer.atlassian.com/platform/forge/getting-started/#log-in-with-an-atlassian-api-token"
     }
   },
-  "postCreateCommand": "npm i -g @forge/cli && forge --version"
+  "postCreateCommand": "npm i -g @forge/cli && npx skills add atlassian/forge-skills --all --yes && forge --version"
 }
