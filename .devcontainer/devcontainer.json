@@ -4,23 +4,16 @@
   "features": {},
   "customizations": {
     "vscode": {
-      "extensions": [
+    "extensions": [
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "github.copilot",
-        "github.copilot-chat"
+        "esbenp.prettier-vscode"
       ],
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.shell.linux": "/bin/bash"
       }
     }
   },
   "remoteUser": "node",
-  "hostRequirements": {
-    "cpus": 2,
-    "memory": "8gb",
-    "storage": "32gb"
-  },
   "secrets": {
     "FORGE_EMAIL": {
       "description": "Login email address of the Forge user.",
@@ -31,5 +24,5 @@
       "documentationUrl": "https://developer.atlassian.com/platform/forge/getting-started/#log-in-with-an-atlassian-api-token"
     }
   },
-  "postCreateCommand": "npm i -g @forge/cli && npx --yes skills add atlassian/forge-skills --all --yes && forge --version"
+  "postCreateCommand": "npm i -g @forge/cli && forge --version"
 }
