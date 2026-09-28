@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "forge": {
+      "url": "https://mcp.atlassian.com/v1/forge/mcp",
+      "type": "http"
+    }
+  },
+  "inputs": []
+}
