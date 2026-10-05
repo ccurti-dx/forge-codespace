@@ -17,11 +17,11 @@
   "secrets": {
     "FORGE_EMAIL": {
       "description": "Login email address of the Forge user.",
-      "documentationUrl": "https://developer.atlassian.com/platform/forge/getting-started/#using-environment-variables-to-login"
+      "documentationUrl": "http://go.atlassian.com/env-var"
     },
     "FORGE_API_TOKEN": {
       "description": "Account API token created at https://id.atlassian.com/manage/api-tokens",
-      "documentationUrl": "https://developer.atlassian.com/platform/forge/getting-started/#log-in-with-an-atlassian-api-token"
+      "documentationUrl": "http://go.atlassian.com/api-token-login"
     }
   },
   "postCreateCommand": "npm i -g @forge/cli && forge --version && npx --yes skills add atlassian/forge-skills --yes 2>&1"
