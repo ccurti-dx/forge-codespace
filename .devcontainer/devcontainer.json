@@ -1,10 +1,14 @@
 {
   "name": "Atlassian Forge",
   "image": "atlassian/forge-devcontainer:latest",
-  "features": {},
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.12"
+    }
+  },
   "customizations": {
     "vscode": {
-    "extensions": [
+      "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode"
       ],
@@ -24,4 +28,5 @@
       "documentationUrl": "http://go.atlassian.com/api-token-login"
     }
   },
-"postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends python3 python3-pip && npm i -g @forge/cli && forge --version && npx --yes skills add atlassian/forge-skills --yes 2>&1"}
+  "postCreateCommand": "forge --version && npx --yes skills add atlassian/forge-skills --yes"
+}
